@@ -6,8 +6,9 @@ Keko Template by [your name]
 
 Brief description of what your keko is about. Keep within four sentences
 
-
 ## Why are you building your Keko?
+
+Brief notes on why personally you are building your Keko. Remember a Keko is for you and you alone for what you want to build for yourself and what you want to learn.
 
 ## How to run your Keko
 
