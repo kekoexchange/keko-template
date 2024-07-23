@@ -1,0 +1,8 @@
+.venv
+node_modules
+.DS_Store
+*.pyc
+*.sqlite
+package-lock.json
+dist/
+__pycache__

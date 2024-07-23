@@ -1,0 +1,8 @@
+// Set your brand colors
+$blue: #2c333d;
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $primary: $blue,
+);
+

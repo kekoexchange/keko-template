@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "@testing-library/user-event": "^14.5.2",
+    "bulma": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.77.8",
+    "web-vitals": "^3.5.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "scripts": {
+    "build-llm-model": "ollama create keko-template-model -f ./backend/llm/llm_modelfile",
+    "build-frontend": "npm install && esbuild ./frontend/index.html ./frontend/index-override.css ./frontend/index.jsx --bundle --outdir=./dist --loader:.html=copy && sass --load-path=node_modules ./frontend/index-framework.scss ./dist/index-framework.css",
+    "build-backend": "python3.11 -m venv ./.venv && source ./.venv/bin/activate && pip install -r requirements.txt",
+    "run-app": "source ./.venv/bin/activate && python ./backend/api.py",
+    "start": "npm run build-llm-model && npm run build-frontend && npm run build-backend && npm run run-app"
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "esbuild": "0.20.2"
+  }
+}
