@@ -1,5 +1,5 @@
 # set base llm model to generate
-FROM llama3
+FROM llama3.1
 
 # sets the temperature to 1 [higher is more creative, lower is more coherent]
 PARAMETER temperature 1
